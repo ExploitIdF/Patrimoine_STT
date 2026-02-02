@@ -16,7 +16,7 @@ On présente la démarche de connaissance du patrimoine du STT:
 * Sources de données
 
 Versions du document
-=========================
+--------------------------------
 Initialisation : 2026-02
 
 
@@ -40,28 +40,23 @@ Un montant d'investissements était calculé par catégorie et par année, de 20
 La démarche reposait principalement sur la base des équipements de l'application Coswin.   
 Le départ d'un agent a causé l'arrêt de la mise à jour de cette base.  
 
-'Age équipement'
-========================= 
+Colonne : *Age équipement*
+============================
 La table des équipements utilisée dans la démarche comporte un champ "age" dont l'origine n'est pas identifiée, 
 dans la mesure où le champ "date de mise en service" n'est renseigné que pour 25% des équipements dans Coswin.   
 Cependant, lorsque le champ "date de mise en service" est renseigné, l'âge indiqué dans le champ "age" est cohérent. Il s'agit de l'age en 2025. 
 
-`Prix renouvellement`
-=========================
+Colonne : *Prix renouvellement*
+================================
 La table des équipements utilisée dans la démarche comporte un champ `Prix renouvellement` qui permet de faire des calculs de couts de renouvellement agrégés.   
 Comme pour l'age, la fiabilité de ce champ est incertaine et devra être contrôlée.  
 On reprendra ces valeurs dans un premier temps, en attendant une vérification plus approfondie.  
 
 Le tiers des valeurs sont nulles. Il s'agit de types d'équipements qui n'ont pas été prix en compte par cette méthode (c'est le cas de l'éclairage en particulier)
- ou d'objets qui figurent dans la table des équipements sans être des équipements comme les locaux.
+ou d'objets qui figurent dans la table des équipements sans être des équipements, comme les locaux.
 
 
 
-n3
-==================
-
-n4
---------------
 
 
 
