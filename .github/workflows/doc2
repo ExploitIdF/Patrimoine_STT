@@ -1,0 +1,35 @@
+name: Build Sphinx PDF
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build-pdf:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Install Python dependencies
+        run: |
+          pip install sphinx furo # Ajoutez vos autres extensions ici
+
+      - name: Build PDF via LaTeX
+        # Cette action utilise un conteneur Docker avec TeX Live pré-installé
+        uses: ammaraskar/sphinx-action@master
+        with:
+          # On demande spécifiquement la construction "latexpdf"
+          build-command: "make latexpdf"
+          docs-folder: "." # À ajuster si votre conf.py est dans un dossier
+
+      - name: Upload PDF Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: PatrimoineSTT-PDF
+          path: _build/latex/PatrimoineSTT.pdf
