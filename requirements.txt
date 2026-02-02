@@ -1,2 +1,3 @@
-sphinx>3.0.0
-furo
+sphinx
+furo==2023.9.10
+accessible-pygments==0.0.4
