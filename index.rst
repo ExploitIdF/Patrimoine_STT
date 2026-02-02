@@ -1,61 +1,68 @@
-Fiches des interventions des équipes d'exploitation de la route 
+Patrimoine du STT
 ####################################################################
 
 .. toctree::
    :hidden:
    :maxdepth: 3
 
-   0_intro
-   1_description
-   3_comparaison
+   0_sources
 
-Présentation des données considérées
+
+Contenu du document
 *************************************
-Pour chaque intervention d'une équipe d'un CEI de la DiRIF, le RI fait une fiche d'intervention selon un modèle établi par la MIPOLEX.   
-Les fiches sont saisies dans une base de données dénomée CI-TEX accessible en ligne (https://dirif.akelio.com/  accès retreint).
+On présente la démarche de connaissance du patrimoine du STT:
 
-L'enregistrement des événements n'est pas systématique et il existe parfois plusieurs fiches pour un même évènement. Cependant, depuis 2023 on observe une amélioration de la qualité et de la complétude des données. 
+* Motivation
+* Rappel des actions passées
+* Sources de données
 
-Comme l'application CI-TEX est récente, elle continue à évoluer. 
-Pour l'analyse des données, il serait utile de connaitre les principales mise à jour de versions.
-
-Exploration des données
-*************************
-Une :doc:`page est consacrée à l'exploration des données sur la période 7/2023-5/2024 <1_description>`. Elle ne reflète sans doute pas l'état plus récent de la qualité des données. 
-
-Chaque nouvelle exploitation doit être vigilente sur la qualité des données et la manière de corriger les bias que cela entraine.
-De même, il faut être prudent dans les comparaisons que l'on peut faire d'une exploitation à l'autre car les corrections ou les hypothèses utilisées ne sont pas toujours les mêmes.
-
-La compréhension des données progresse aussi avec le temps et justifie que les méthodes de traitement évoluent.
-En outre, la correction des biais demandant des efforts, pour répondre rapidement on peut être amené à faire des simplifications.  
-
-Le sujet de l'élimination des doublons reste à traiter.
+Versions du document
+=========================
+Initialisation : 2026-02
 
 
-Comparaison avec la main courante SIRIUS
-********************************************
+Motivation
+***********
+La connaissance du patrimoine est essentielle pour la gestion efficace des ressources d'une organisation. 
+Les entreprises et les collectivités locales ont l'obligation de tenir un inventaire des immobilisations.
+Ce n'est pas obligatoire pour un service de l'Etat comme le STT, mais c'est fortement recommandé car la gestion du patrimoine est un enjeu important du service.    
 
-On documente ici les exploitations qui ont été faites sur les fichiers des interventions des AGER.
-Ce travail a été demandé par Jonathan COLE, l'application de saisie est pilotée par la MIPOLEX.
+En 2025, le projet de service de la DiRIF identifie la connaissance du patrimoine comme un enjeu majeur pour le STT.
+Dans ce contexte, le STT doit 
+**Etablir une programmation pluriannuelle de l’entretien de l’infrastructure et de la maintenance des équipements tunnels**.   
+En particulier le DETT a l'objectif de **cartographier les équipements avec leur âge, 
+la recommandation de maintenance du constructeur et le cout de renouvellement**.
 
- 
-Première exploitation 6/2024
-*****************************************************************
-La première exploitation a été réalisée en juin 2024, elle a porté sur des données de la périoide 7/23 -> 5/24.  
+Démarche menée dans le passé 
+*******************************
+En 2019, la DiRIF avait transmis à la DIT un planning de renouvellement des équipements du STT selon les catégories d'équipements du CETU (C1 - C11).
+Un montant d'investissements était calculé par catégorie et par année, de 2020 à 2040.
 
-A cette occasion, on a commencé à documenter la nature des informations contenues dans la base (Suivre ce lien :
-:doc:`1_description` )
+La démarche reposait principalement sur la base des équipements de l'application Coswin.   
+Le départ d'un agent a causé l'arrêt de la mise à jour de cette base.  
 
-L'exercice de liaison avec la b   base Sirius avait fait l'objet d'échanges avec Adrien Puges qui ne sont pas repris ici ...
+'Age équipement'
+========================= 
+La table des équipements utilisée dans la démarche comporte un champ "age" dont l'origine n'est pas identifiée, 
+dans la mesure où le champ "date de mise en service" n'est renseigné que pour 25% des équipements dans Coswin.   
+Cependant, lorsque le champ "date de mise en service" est renseigné, l'âge indiqué dans le champ "age" est cohérent. Il s'agit de l'age en 2025. 
 
-Deuxième exploitation 2/2025
-******************************
-En janvier 2025, la Mipolex a diffusé le fichier de l'année 2024 et JC m'a demandé de refaire l'exercice de comparaison avec les événement SIRIUS.
-On rend compte de ce travail ici : :doc:`3_comparaison`
+`Prix renouvellement`
+=========================
+La table des équipements utilisée dans la démarche comporte un champ `Prix renouvellement` qui permet de faire des calculs de couts de renouvellement agrégés.   
+Comme pour l'age, la fiabilité de ce champ est incertaine et devra être contrôlée.  
+On reprendra ces valeurs dans un premier temps, en attendant une vérification plus approfondie.  
+
+Le tiers des valeurs sont nulles. Il s'agit de types d'équipements qui n'ont pas été prix en compte par cette méthode (c'est le cas de l'éclairage en particulier)
+ ou d'objets qui figurent dans la table des équipements sans être des équipements comme les locaux.
 
 
 
+n3
+==================
 
+n4
+--------------
 
 
 

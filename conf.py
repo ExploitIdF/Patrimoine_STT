@@ -1,7 +1,7 @@
-project = "Interventions des équipes d'exploitation de la route"
-copyright = '2024-04, on'
+project = "Patrimoine du STT"
+copyright = '2026-02, on'
 author = 'on'
-release = ''
+release = '0.1'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
@@ -26,3 +26,19 @@ html_theme_options = {
     "light_logo": "logo.jpg",
     "dark_logo": "logo.jpg",   
 }
+# -- Options pour le format PDF (LaTeX) --------------------------------------
+latex_engine = 'pdflatex' # ou 'xelatex' pour un meilleur support des polices
+latex_documents = [
+    ('index', 'PatrimoineSTT.tex', 'Patrimoine du STT', author, 'manual'),
+]
+
+# Optionnel : Personnaliser la page de garde
+latex_elements = {
+    'papersize': 'a4paper',
+    'pointsize': '11pt',
+    'preamble': r'''
+        \usepackage{fourier} % Une police élégante pour le patrimoine
+        \setlength{\headheight}{14pt}
+    ''',
+}
+
