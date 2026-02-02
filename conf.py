@@ -1,6 +1,6 @@
 project = "Patrimoine du STT"
 copyright = '2026-02, on'
-author = 'on'
+author = 'Olivier Nalin'
 release = '0.1'
 
 # -- General configuration ---------------------------------------------------
