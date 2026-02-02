@@ -14,22 +14,31 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.x'
+          python-version: '3.11' # On utilise une version moderne
+
+      - name: Install LaTeX and system tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended texlive-fonts-extra texlive-lang-french latexmk
 
       - name: Install Python dependencies
         run: |
-          pip install sphinx furo # Ajoutez vos autres extensions ici
+          python -m pip install --upgrade pip
+          # On installe les versions les plus récentes
+          pip install sphinx furo 
 
-      - name: Build PDF via LaTeX
-        # Cette action utilise un conteneur Docker avec TeX Live pré-installé
-        uses: ammaraskar/sphinx-action@master
-        with:
-          # On demande spécifiquement la construction "latexpdf"
-          build-command: "make latexpdf"
-          docs-folder: "." # À ajuster si votre conf.py est dans un dossier
+      - name: Build PDF
+        run: |
+          # On n'utilise pas 'make', on appelle directement sphinx-build
+          # Le '.' indique que conf.py est à la racine. 
+          # Changez le '.' par 'docs' si vos fichiers sont dans un sous-dossier.
+          sphinx-build -b latex . _build/latex
+          cd _build/latex
+          # Cette commande compile le .tex en .pdf
+          latexmk -pdf -f -interaction=nonstopmode *.tex || true
 
       - name: Upload PDF Artifact
         uses: actions/upload-artifact@v4
         with:
           name: PatrimoineSTT-PDF
-          path: _build/latex/PatrimoineSTT.pdf
+          path: _build/latex/*.pdf
