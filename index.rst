@@ -7,7 +7,6 @@ Patrimoine du STT
 
    0_sources
 
-
 Contenu du document
 *************************************
 On présente la démarche de connaissance du patrimoine du STT:
