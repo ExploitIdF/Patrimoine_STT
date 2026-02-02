@@ -28,7 +28,7 @@ jobs:
       - name: Build HTML
         run: |
           # Remplacez 'docs' par le nom de votre dossier source Sphinx
-          sphinx-build -b html docs/ public/
+          sphinx-build -b html . public/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
