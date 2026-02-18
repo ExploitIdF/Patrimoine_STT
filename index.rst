@@ -6,6 +6,7 @@ Patrimoine du STT
    :maxdepth: 3
 
    0_sources
+   1_origine
 
 Contenu du document
 *************************************
